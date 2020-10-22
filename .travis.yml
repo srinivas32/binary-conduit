@@ -1,6 +1,4 @@
-arch:
-  - amd64
-  - ppc64le
+
 sudo: true
 language: haskell
 
@@ -26,6 +24,19 @@ matrix:
 
   # stack
   - ghc: 8.8.3
+  # power jobs added.
+  - ghc: 8.4.4
+    arch: ppc64le
+  - ghc: 8.6.5
+    arch: ppc64le
+  - ghc: 8.8.2
+    arch: ppc64le
+  - ghc: 8.10.1
+    arch: ppc64le
+
+  # stack
+  - ghc: 8.8.3  
+    arch: ppc64le
     env: STACK_YAML="$TRAVIS_BUILD_DIR/stack.yaml"
 
 install:
